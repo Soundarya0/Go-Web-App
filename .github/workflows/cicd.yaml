@@ -1,5 +1,4 @@
 # CICD using GitHub actions
-## Step 1: Create a new GitHub repository
 
 name: CI/CD
 
