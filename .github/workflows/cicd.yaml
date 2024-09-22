@@ -27,7 +27,7 @@ jobs:
         go-version: 1.22
 
     - name: Build
-      run: go build -o Go-Web-App 
+      run: go build -o go-web-app 
 
     - name: Test
       run: go test ./
@@ -68,7 +68,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/Go-Web-App :${{github.run_id}}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app :${{github.run_id}}
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
@@ -83,12 +83,12 @@ jobs:
 
     - name: Update tag in Helm chart
       run: |
-        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/Go-Web-App -chart/values.yaml
+        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-web-app -chart/values.yaml
 
     - name: Commit and push changes
       run: |
         git config --global user.email "soundaryaplm@gmail.com"
         git config --global user.name "Soundarya0"
-        git add helm/Go-Web-App -chart/values.yaml
+        git add helm/go-web-app -chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
