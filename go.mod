@@ -1,3 +1,3 @@
-module github.com/Soundarya0/Go-Web-Application-DevOps
+module go-port
 
 go 1.21.10
