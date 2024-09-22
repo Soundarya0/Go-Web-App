@@ -30,7 +30,7 @@ jobs:
       run: go build -o Go-Web-Application-DevOps 
 
     - name: Test
-      run: go test ./...
+      run: go test ./
   
   code-quality:
     runs-on: ubuntu-latest
