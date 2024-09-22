@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Go-Web-Application-DevOps 
+  name: Go-Web-App 
   labels:
-    app: Go-Web-Application-DevOps 
+    app: Go-Web-App
 spec:
   ports:
   - port: 80
     targetPort: 8080
     protocol: TCP
   selector:
-    app: Go-Web-Application-DevOps 
+    app: Go-Web-App 
   type: ClusterIP

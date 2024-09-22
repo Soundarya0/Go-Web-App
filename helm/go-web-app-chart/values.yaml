@@ -1,11 +1,11 @@
-# Default values for Go-Web-Application-DevOps -chart.
+# Default values for Go-Web-App -chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: bask02/Go-Web-Application-DevOps 
+  repository: bask02/Go-Web-App 
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "10016307834"
