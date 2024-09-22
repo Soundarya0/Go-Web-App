@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    fs := http.FileServer(http.Dir("ApplicationCode"))
+    fs := http.FileServer(http.Dir("static"))
     http.Handle("/", http.StripPrefix("/", fs))
 
     log.Println("Server started on :8080")
