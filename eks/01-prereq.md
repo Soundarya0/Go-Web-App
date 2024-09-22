@@ -1,11 +1,11 @@
 ### Prerequisites
 Before you start, make sure you have the following prerequisites:
 
-### kubectl – 
+### KUBECTL – 
 
 A command line tool for working with Kubernetes clusters. For more information, see Installing or updating kubectl.
 
-### eksctl – 
+### EKSCTL – 
 
 A command line tool for working with EKS clusters that automates many individual tasks. For more information, see Installing or updating.
 
